@@ -1,2 +1,26 @@
 @use "./partials/variables" as *;
 @import "node_modules/bootstrap/scss/bootstrap";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Space Grotesk Variable', sans-serif;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
