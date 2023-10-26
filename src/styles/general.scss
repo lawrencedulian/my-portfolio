@@ -38,6 +38,6 @@ main {
     pointer-events: none;
 }
 
-#circularcursor:hover {
-    background: transparent;
-}
+.no-cursor {
+    cursor: none;
+  }

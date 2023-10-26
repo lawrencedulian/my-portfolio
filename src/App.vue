@@ -25,6 +25,9 @@ export default {
             const currentRoute = this.$route;
             return currentRoute.meta.bgColor || '#fffeee'; // Colore di default se non specificato
         },
+        isTouchDevice() {
+            return 'ontouchstart' in window || navigator.msMaxTouchPoints;
+        },
     },
     methods: {
         toggleMenu() {
@@ -38,7 +41,7 @@ export default {
 </script>
 
 <template>
-    <div id="circularcursor"></div>
+    <div :class="{ 'no-cursor': isTouchDevice }" id="circularcursor"></div>
     <div class="overlay d-md-none" :class="{ 'show': isMenuOpen }" v-if="isMenuOpen" @click="closeMenu">
         <div class="overlay-content">
             <ul>
