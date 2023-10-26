@@ -13,11 +13,18 @@ export default {
             isMenuOpen: false,
         };
     },
+    mounted() {
+        document.body.onmousemove = function (e) {
+            const cursor = document.getElementById('circularcursor'); // Corretto
+            cursor.style.left = (e.clientX - cursor.clientWidth / 2) + 'px';
+            cursor.style.top = (e.clientY - cursor.clientHeight / 2) + 'px';
+        }
+    },
     computed: {
         routeBgColor() {
             const currentRoute = this.$route;
             return currentRoute.meta.bgColor || '#fffeee'; // Colore di default se non specificato
-        }
+        },
     },
     methods: {
         toggleMenu() {
@@ -31,21 +38,21 @@ export default {
 </script>
 
 <template>
+    <div id="circularcursor"></div>
     <div class="overlay d-md-none" :class="{ 'show': isMenuOpen }" v-if="isMenuOpen" @click="closeMenu">
         <div class="overlay-content">
             <ul>
                 <li>
-                    <router-link :to="{ name: 'home' }" class="nav-link">HOME</router-link>
+                    <router-link :to="'/'" class="nav-link">HOME</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'work' }" class="nav-link">WORK</router-link>
-
+                    <router-link :to="'/work'" class="nav-link">WORK</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'about' }" class="nav-link">ABOUT</router-link>
+                    <router-link :to="'/about'" class="nav-link">ABOUT</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'contact' }" class="nav-link">CONTACT</router-link>
+                    <router-link :to="'/contact'" class="nav-link">CONTACT</router-link>
                 </li>
             </ul>
         </div>
