@@ -116,7 +116,7 @@ export default {
 
         .nav-link {
             display: block;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: white;
             text-decoration: none;
