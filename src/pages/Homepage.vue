@@ -50,7 +50,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
     .container {
         height: calc(100vh - var(--header-height));
     }
