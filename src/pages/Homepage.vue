@@ -38,4 +38,13 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
+.name-container {
+    max-width: 100%;
+    height: auto;
+
+    .name {
+        width: 100%;
+    }
+}
 </style>
