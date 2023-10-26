@@ -32,8 +32,8 @@ export default {
 
 <template>
     <div class="overlay d-md-none" :class="{ 'show': isMenuOpen }" v-if="isMenuOpen" @click="closeMenu">
-        <div class="overlay-content">
-            <ul>
+        <div class=" overlay-content position-absolute top-50 start-0 translate-middle-y">
+            <ul class="d-flex flex-column align-items-start">
                 <li>
                     <router-link :to="'/'" class="nav-link">HOME</router-link>
                 </li>
@@ -111,25 +111,17 @@ export default {
     z-index: 1;
 
     .overlay-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        padding: 20px;
+        padding: 30px;
         border-radius: 8px;
 
         .nav-link {
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: white;
             text-decoration: none;
             transition: font-size 0.2s;
-        }
-
-        .nav-link:hover {
-            font-size: 1.5rem;
+            padding: .5rem;
         }
 
         .nav-link.router-link-active {
@@ -137,7 +129,6 @@ export default {
             border-radius: 20px;
             padding: .5rem;
         }
-
     }
 
     .overlay-content a {

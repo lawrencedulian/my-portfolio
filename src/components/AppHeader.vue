@@ -1,11 +1,6 @@
 <script>
 export default {
     name: 'AppHeader',
-    data() {
-        return {
-            isCursorHovered: false,
-        }
-    },
     props: {
         isMenuOpen: Boolean, // Pass isMenuOpen as a prop from the parent component
     },
@@ -25,7 +20,7 @@ export default {
 
 <template>
     <header class="d-flex align-items-center" :style="{ backgroundColor: routeBgColor }">
-        <div class="container d-flex justify-content-end d-md-none">
+        <div class="container d-flex justify-content-start d-md-none">
             <div class="hamburger d-flex flex-column justify-content-between" @click="toggleMenu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -63,11 +58,11 @@ header {
     font-size: var(--font-size-header);
 
     .hamburger {
-        height: 15px;
+        height: 20px;
         cursor: pointer;
 
         .bar {
-            width: 23px;
+            width: 35px;
             height: 2px;
             background-color: var(--button-color);
         }
