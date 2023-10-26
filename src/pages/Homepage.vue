@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    height: calc(100vh - var(--header-height));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,5 +48,26 @@ export default {
     .name {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 2560px) {
+    .container {
+        height: calc(100vh - var(--header-height) - var(--footer-height));
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        height: calc(100vh - var(--header-height) - var(--footer-height));
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        height: calc(100vh - var(--header-height) - var(--footer-height));
+    }
+
 }
 </style>
