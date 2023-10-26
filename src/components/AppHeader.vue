@@ -56,6 +56,7 @@ export default {
 header {
     height: var(--header-height);
     font-size: var(--font-size-header);
+    z-index: 10;
 
     .hamburger {
         height: 20px;
@@ -64,7 +65,7 @@ header {
         .bar {
             width: 35px;
             height: 2px;
-            background-color: var(--button-color);
+            background-color: var(--text-color);
         }
     }
 

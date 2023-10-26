@@ -38,22 +38,4 @@ export default {
     justify-content: center;
     align-items: center;
 }
-
-.name-container {
-    max-width: 100%;
-    /* Ensure the image doesn't exceed its container */
-    height: auto;
-    /* Let the image scale proportionally */
-
-    .name {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 820px) {
-    .container {
-        height: calc(100vh - var(--header-height));
-    }
-
-}
 </style>
