@@ -76,7 +76,6 @@ header {
     .menu {
         .nav-link {
             padding: .2rem .5rem .2rem .5rem;
-            cursor: none;
         }
 
         .nav-link.router-link-active {
