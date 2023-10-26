@@ -4,7 +4,7 @@ export default {
     data() {
         return {
             currentImageUrl: "/img/homepage/1.png",
-            totalImg: 14,
+            totalImg: 13,
         };
     },
     mounted() {
@@ -25,8 +25,9 @@ export default {
 
 <template>
     <div class="container">
-        <div class="name-container">
+        <div class="name-container d-flex flex-column align-items-end">
             <img class="name" :src="currentImageUrl" alt="Name" />
+            <h3 class="subtitle mt-2">- jr. full stack web developer</h3>
         </div>
     </div>
 </template>
@@ -45,6 +46,18 @@ export default {
 
     .name {
         width: 100%;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .name-container {
+        .subtitle {
+            font-size: .8rem;
+        }
     }
 }
 </style>
