@@ -27,7 +27,7 @@ export default {
                     enhance my skills and embrace new technologies.
 
                     In addition to my web development background, I'm currently exploring the exciting world of UX/UI
-                    design, as I believe it might be my true calling. I'm captivated by the art of creating user-friendly
+                    design. I'm captivated by the art of creating user-friendly
                     and visually appealing interfaces that enhance the digital experience.
 
                     While I'm in a phase of exploration, I'm also actively seeking opportunities to apply my skills and
@@ -35,7 +35,7 @@ export default {
                     exciting opportunities in the tech and design space.
 
                     When I'm not immersed in code and design, you'll find me hitting the streets on my bicycle, enjoying the
-                    beautiful strait of Messina, or on the hunt for the next K-drama series to binge.
+                    beautiful strait of Messina, or on the hunt for the next netflix series to binge.
 
                     I'm excited about the journey ahead, eager to learn, and ready to contribute to the tech and design
                     communities. Let's connect and explore the possibilities together!"
