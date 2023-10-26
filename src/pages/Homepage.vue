@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,23 +50,9 @@ export default {
     }
 }
 
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 768px) {
     .container {
-        height: calc(100vh - var(--header-height) - var(--footer-height));
-    }
-
-}
-
-@media screen and (max-width: 1440px) {
-    .container {
-        height: calc(100vh - var(--header-height) - var(--footer-height));
-    }
-
-}
-
-@media screen and (max-width: 1024px) {
-    .container {
-        height: calc(100vh - var(--header-height) - var(--footer-height));
+        height: calc(100vh - var(--header-height));
     }
 
 }
