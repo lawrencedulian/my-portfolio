@@ -30,7 +30,7 @@ export default {
 
         <div class="container d-flex menu d-md-block d-none">
             <div class="row">
-                <div class="col-4">
+                <div class="col col-md-6 col-lg-4 col-xl-3">
                     <ul class="d-flex justify-content-between align-items-center">
                         <li>
                             <router-link :to="'/'" class="nav-link">HOME</router-link>

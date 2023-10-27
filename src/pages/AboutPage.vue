@@ -48,7 +48,7 @@ export default {
             <div class="col-12 col-lg-6 col-sm-12">
                 <p>WORK EXPERIENCE</p>
             </div>
-            <div class="col col-lg-6 mb-5">
+            <div class="col col-lg-6 mt-3 mb-5">
                 <ul>
                     <li class="list" v-for="(exp, index) in this.store.experience" :key="index">
                         <span>{{ exp.title }}</span>
@@ -64,7 +64,7 @@ export default {
             <div class="col-12 col-lg-6 col-sm-12">
                 <p>EDUCATION</p>
             </div>
-            <div class="col mb-5">
+            <div class="col col-lg-6 mt-3 mb-5 ">
                 <ul>
                     <li class="list" v-for="(edu, index) in this.store.education" :key="index">
                         <span>{{ edu.qualification }}</span>
@@ -92,6 +92,7 @@ export default {
 p {
     text-align: justify;
 }
+
 
 .work-experience {
     border-top: 1px solid var(--text-color);
@@ -138,6 +139,19 @@ p {
         .title {
             font-size: 4rem;
         }
+    }
+
+    .work-experience {
+        border-top: none
+    }
+
+    .work-experience,
+    .education {
+        border-bottom: none
+    }
+
+    .col-12 {
+        border-bottom: 1px solid var(--text-color);
     }
 }
 
