@@ -9,7 +9,6 @@ export default {
     },
     data() {
         return {
-            name: 'lawrence',
             isMenuOpen: false,
         };
     },

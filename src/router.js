@@ -38,4 +38,10 @@ const router = createRouter({
     ]
 });
 
+router.beforeEach((to, from, next) => {
+    const bodyBackgroundColor = to.meta.bgColor || '#fffeee'; // Colore di default se non specificato
+    document.body.style.backgroundColor = bodyBackgroundColor;
+    next();
+  })
+
 export {router};
