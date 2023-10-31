@@ -6,13 +6,13 @@ export default {
     },
     methods: {
         toggleMenu() {
-            this.$emit('toggleMenu'); // Emit the event to toggle the menu
+            this.$emit('toggleMenu') // Emit the event to toggle the menu
         },
     },
     computed: {
         routeBgColor() {
             const currentRoute = this.$route;
-            return currentRoute.meta.bgColor || '#fffeee'; // Colore di default se non specificato
+            return currentRoute.meta.bgColor || '#fffeee';
         }
     },
 };
@@ -20,11 +20,10 @@ export default {
 
 <template>
     <header class="d-flex align-items-center" :style="{ backgroundColor: routeBgColor }">
-        <div class="container d-flex justify-content-start d-md-none">
-            <div class="hamburger d-flex flex-column justify-content-between" @click="toggleMenu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+        <div class="position-relative d-md-none">
+            <div class="menu-wrapper position-absolute top-50 start-0 translate-middle-y" @click="toggleMenu">
+                <div class="menu-bar one"></div>
+                <div class="menu-bar two"></div>
             </div>
         </div>
 
@@ -80,6 +79,10 @@ header {
         }
 
         font-weight: 500;
+    }
+
+    .menu-wrapper {
+        margin-left: 1.5rem;
     }
 }
 </style>
