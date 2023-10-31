@@ -30,9 +30,9 @@ export default {
 </script>
 
 <template>
-    <div class="overlay d-md-none" :class="{ 'show': isMenuOpen }" v-if="isMenuOpen">
+    <div class="overlay d-md-none" :class="{ 'show': isMenuOpen }" v-if="isMenuOpen" @click="closeMenu">
         <div class="position-relative">
-            <div class="menu-wrapper position-absolute top-50 start-0 translate-middle-y" @click="closeMenu">
+            <div class="menu-wrapper position-absolute top-50 start-0 translate-middle-y" @click="toggleMenu">
                 <div class="menu-bar one"></div>
                 <div class="menu-bar two"></div>
             </div>
