@@ -68,29 +68,19 @@ export default {
     <div class="container">
         <section class="work row">
             <div class="col-6"></div>
-            <h2 class="title">work</h2>
+            <div class="col-6">
+                <h2 class="title">work</h2>
+            </div>
         </section>
 
 
-        <section class="work-projects row mt-5">
-            <div class="col mb-5">
-                <ul>
-                    <li class="d-flex justify-content-between mb-5" v-for="(work, index) in works" :key="index">
-                        <!-- Se l'indice è pari, metti l'immagine prima di h4 -->
-                        <template v-if="index % 2 === 0">
-                            <img class="mb-5" :src="getImage(`/img/projects/${work.cover}`)" alt="">
-                            <h4>{{ work.title }}</h4>
-                            <p>{{ work.description }}</p>
-                        </template>
-                        <!-- Se l'indice è dispari, metti h4 prima dell'immagine -->
-                        <template v-else>
-                            <h4>{{ work.title }}</h4>
-                            <p>{{ work.description }}</p>
-                            <img :src="getImage(`/img/projects/${work.cover}`)" alt="">
-                        </template>
-                    </li>
-                </ul>
-
+        <section class="work-projects row row-cols-md-2 mt-5">
+            <div class="col-12 mb-5" v-for="(work, index) in works" :key="index">
+                <div class="container" style="max-height: 400px;">
+                    <h4>{{ work.title }}</h4>
+                    <p>{{ work.description }}</p>
+                    <img class="mb-5" :src="getImage(`/img/projects/${work.cover}`)" alt="">
+                </div>
             </div>
         </section>
     </div>
@@ -101,12 +91,18 @@ export default {
     font-size: 5rem;
 }
 
+h4 {
+    border-bottom: 1px solid var(--text-color);
+}
+
+
 img {
     width: 100%;
     max-width: 600px;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     object-position: top;
+    box-shadow: 3px 3px 1px #ccc;
 }
 
 @media screen and (max-width: 991px) {
