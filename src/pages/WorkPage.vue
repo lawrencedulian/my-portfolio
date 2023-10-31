@@ -93,4 +93,10 @@ img {
     object-fit: cover;
     object-position: top;
 }
+
+@media screen and (max-width: 991px) {
+    .title {
+        font-size: 3rem;
+    }
+}
 </style>
