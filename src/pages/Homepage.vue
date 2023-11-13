@@ -27,7 +27,7 @@ export default {
     <!-- CONTAINER -->
     <div class="container">
         <!-- HOME -->
-        <div class="home">
+        <div class="home p-4">
             <h3 class="subtitle mb-2">Hello! 👋 I am,</h3>
             <img class="title ps-5 pe-5" :src="currentImageUrl" alt="Name" />
             <h3 class="subtitle mt-2 text-end">- front end web developer</h3>
