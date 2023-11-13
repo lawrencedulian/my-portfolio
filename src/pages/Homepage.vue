@@ -17,46 +17,53 @@ export default {
         },
         startImageChangeInterval() {
             this.currentIndex = 1;
-            setInterval(this.changeImage, 200);
+            setInterval(this.changeImage, 250);
         },
     },
 };
 </script>
 
 <template>
+    <!-- CONTAINER -->
     <div class="container">
-        <div class="name-container d-flex flex-column align-items-end">
-            <img class="name" :src="currentImageUrl" alt="Name" />
-            <h3 class="subtitle mt-2">- jr. full stack web developer</h3>
+        <!-- HOME -->
+        <div class="home">
+            <h3 class="subtitle mb-2">Hello! 👋 I am,</h3>
+            <img class="title ps-5 pe-5" :src="currentImageUrl" alt="Name" />
+            <h3 class="subtitle mt-2 text-end">- front end web developer</h3>
         </div>
+        <!-- /HOME -->
     </div>
+    <!-- /CONTAINER -->
 </template>
 
 <style lang="scss" scoped>
+// CONTAINER
 .container {
     height: calc(100vh - var(--header-height) - var(--footer-height));
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.name-container {
-    max-width: 100%;
-    height: auto;
-
-    .name {
+    // TITLE
+    .title {
         width: 100%;
     }
 
+    // SUBTITLE
     .subtitle {
         font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .name-container {
+
+    // CONTAINER
+    .container {
+
+        // SUBTITLE
         .subtitle {
-            font-size: .8rem;
+            font-size: 1rem;
         }
     }
 }
