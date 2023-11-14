@@ -29,7 +29,7 @@ export default {
         <!-- HOME -->
         <div class="home p-4">
             <h3 class="subtitle mb-2">Hello! 👋 I am,</h3>
-            <img class="title ps-5 pe-5" :src="currentImageUrl" alt="Name" />
+            <img class="title ps-3 pe-3" :src="currentImageUrl" alt="Name" />
             <h3 class="subtitle mt-2 text-end">- front end web developer</h3>
         </div>
         <!-- /HOME -->
@@ -38,19 +38,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// CONTAINER
 .container {
     height: calc(100vh - var(--header-height) - var(--footer-height));
     display: flex;
     justify-content: center;
     align-items: center;
 
-    // TITLE
     .title {
         width: 100%;
     }
 
-    // SUBTITLE
     .subtitle {
         font-size: 1.5rem;
     }
@@ -58,10 +55,7 @@ export default {
 
 @media screen and (max-width: 768px) {
 
-    // CONTAINER
     .container {
-
-        // SUBTITLE
         .subtitle {
             font-size: 1rem;
         }
