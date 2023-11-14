@@ -5,14 +5,39 @@ export default {
     name: "AboutPage",
     data() {
         return {
-            store
+            store,
+            // LANGUAGES
+            languages: [
+                "HTML5",
+                "CSS3/Sass",
+                "Javascript ES6",
+                "SQL",
+            ],
+
+            // FRAMEWORKS
+            frameworks: [
+                "Vue 3",
+                "Bootstrap 5",
+                "Laravel 9"
+            ],
+
+            // TOOLS
+            tools: [
+                "bash",
+                "Git & Github",
+                "Chrome DevTools",
+                "Postman",
+                "MySQL"
+            ]
         }
     },
 }
 </script>
 
 <template>
+    <!-- CONTAINER -->
     <div class="container">
+        <!-- ABOUT ME SECTION -->
         <section class="about-me row">
             <div class="col-lg-6 d-flex justify-content-end">
                 <img class="profile m-0" src="../assets/img/profile.jpeg" alt="">
@@ -43,7 +68,35 @@ export default {
                 </p>
             </div>
         </section>
+        <!-- /ABOUT ME SECTION -->
 
+        <!-- SKILLS SECTION -->
+        <section class="skills row mt-5">
+            <div class="col-12 col-lg-6 col-sm-12">
+                <p>SKILLS</p>
+            </div>
+            <div class="col">
+                <p>LANGUAGES</p>
+                <ul>
+                    <li class="font-weight-100" v-for="lang in languages" :key="lang"> {{ lang }}</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>FRAMEWORKS</p>
+                <ul>
+                    <li class="font-weight-100" v-for="fr in frameworks" :key="fr"> {{ fr }}</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>TOOLS</p>
+                <ul>
+                    <li class="font-weight-100" v-for="tool in tools" :key="tool"> {{ tool }}</li>
+                </ul>
+            </div>
+        </section>
+        <!-- /SKILLS SECTION-->
+
+        <!-- WORK EXPERIENCE SECTION -->
         <section class="work-experience row mt-5">
             <div class="col-12 col-lg-6 col-sm-12">
                 <p>WORK EXPERIENCE</p>
@@ -54,12 +107,14 @@ export default {
                         <span>{{ exp.title }}</span>
                         <h4>{{ exp.company }}</h4>
                         <p>{{ exp.period }}</p>
-                        <p>{{ exp.description }}</p>
+                        <p class="font-weight-100">{{ exp.description }}</p>
                     </li>
                 </ul>
             </div>
         </section>
+        <!-- /WORK EXPERIENCE SECTION -->
 
+        <!-- EDUCATION SECTION -->
         <section class="education row mt-5">
             <div class="col-12 col-lg-6 col-sm-12">
                 <p>EDUCATION</p>
@@ -70,12 +125,14 @@ export default {
                         <span>{{ edu.qualification }}</span>
                         <h4>{{ edu.school }}</h4>
                         <p>{{ edu.period }}</p>
-                        <p>{{ edu.description }}</p>
+                        <p class="font-weight-100">{{ edu.description }}</p>
                     </li>
                 </ul>
             </div>
         </section>
+        <!-- EDUCATION SECTION -->
 
+        <!-- CV SECTION -->
         <section class="cv row mt-5">
             <div class="col">
                 <span>CV</span>
@@ -85,7 +142,9 @@ export default {
                     onclick="window.open('/lawrence-edulian.pdf', '_blank'); return false">download</a>
             </div>
         </section>
+        <!-- /CV SECTION -->
     </div>
+    <!-- /CONTAINER -->
 </template>
 
 <style lang="scss" scoped>
@@ -93,8 +152,12 @@ p {
     text-align: justify;
 }
 
+.font-weight-100 {
+    font-weight: 100;
+}
 
-.work-experience {
+.work-experience,
+.skills {
     border-top: 1px solid var(--text-color);
     padding-top: 3rem;
 }
@@ -141,15 +204,23 @@ p {
         }
     }
 
-    .work-experience {
+    .work-experience,
+    .skills {
         border-top: none
     }
 
     .work-experience,
+    .skills,
     .education {
         border-bottom: none;
 
         .col.col-lg-6.mb-5 {
+            margin-top: 1.2rem;
+        }
+    }
+
+    .skills {
+        .col {
             margin-top: 1.2rem;
         }
     }
