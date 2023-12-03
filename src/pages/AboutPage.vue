@@ -133,13 +133,18 @@ export default {
         <!-- EDUCATION SECTION -->
 
         <!-- CV SECTION -->
-        <section class="cv row mt-5">
-            <div class="col">
-                <span>CV</span>
+        <section class="cv row mt-5 mb-5">
+            <div class="col-12 col-lg-6 col-sm-12">
+                <p>CV</p>
             </div>
-            <div class="col mb-5">
+            <div class="col">
                 <a class="btn btn-lg btn-blue rounded-pill"
-                    onclick="window.open('/lawrence-edulian.pdf', '_blank'); return false">download</a>
+                    onclick="window.open('/lawrence-edulian-cv-ita.pdf', '_blank'); return false">ITALIAN</a>
+            </div>
+
+            <div class="col">
+                <a class="btn btn-lg btn-blue rounded-pill"
+                    onclick="window.open('/lawrence-edulian-cv-en.pdf', '_blank'); return false">ENGLISH</a>
             </div>
         </section>
         <!-- /CV SECTION -->
@@ -181,6 +186,11 @@ p {
 }
 
 .cv {
+
+    .btn {
+        font-size: .8rem;
+    }
+
     .btn-blue {
         background-color: var(--text-color);
         color: white;
@@ -227,6 +237,12 @@ p {
 
     .col-12 {
         border-bottom: 1px solid var(--text-color);
+    }
+
+    .cv {
+        .col {
+            margin-top: 1rem;
+        }
     }
 }
 
