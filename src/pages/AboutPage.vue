@@ -144,7 +144,7 @@ export default {
 
             <div class="col">
                 <a class="btn btn-lg btn-blue rounded-pill"
-                    onclick="window.open('/lawrence-edulian-cv-en.pdf', '_blank'); return false">ENGLISH</a>
+                    onclick="window.open('/lawrence-edulian-cv-eng.pdf', '_blank'); return false">ENGLISH</a>
             </div>
         </section>
         <!-- /CV SECTION -->
