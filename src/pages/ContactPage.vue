@@ -1,33 +1,6 @@
 <script>
 export default {
     name: "ContactPage",
-    methods: {
-        submitContactForm: function () {
-            const formData = new FormData(document.getElementById('contact'));
-
-            fetch('/api/contact', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Contact form submitted successfully');
-                        // Display a success message
-                        alert('Your message has been sent successfully.');
-                        // Clear the form fields
-                        document.getElementById('contact').reset();
-                    } else {
-                        throw new Error('An error occurred while sending your message.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error sending contact form:', error);
-                    // Handle any errors
-                    alert('An error occurred while sending your message. Please try again later.');
-                });
-        }
-    }
-
 };
 </script>
 
@@ -44,7 +17,7 @@ export default {
         <section class="contact-form mt-3">
             <div class="row">
                 <div class="col-12 col-lg-8 col-md-12">
-                    <form name="contact" method="POST">
+                    <form name="contact" method="POST" netlify>
                         <!-- NAME AND EMAIL-->
                         <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
                             <div class="col">
