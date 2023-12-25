@@ -1,6 +1,33 @@
 <script>
 export default {
     name: "ContactPage",
+    methods: {
+        submitContactForm: function () {
+            const formData = new FormData(document.getElementById('contact'));
+
+            fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Contact form submitted successfully');
+                        // Display a success message
+                        alert('Your message has been sent successfully.');
+                        // Clear the form fields
+                        document.getElementById('contact').reset();
+                    } else {
+                        throw new Error('An error occurred while sending your message.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error sending contact form:', error);
+                    // Handle any errors
+                    alert('An error occurred while sending your message. Please try again later.');
+                });
+        }
+    }
+
 };
 </script>
 
@@ -17,28 +44,8 @@ export default {
         <section class="contact-form mt-3">
             <div class="row">
                 <div class="col-12 col-lg-8 col-md-12">
-                    <form name="contact" method="POST" data-netlify="true">
-                        <p>
-                            <label>Your Name: <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                            <label>Your Email: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <label>Your Role: <select name="role[]" multiple>
-                                    <option value="leader">Leader</option>
-                                    <option value="follower">Follower</option>
-                                </select></label>
-                        </p>
-                        <p>
-                            <label>Message: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                            <button type="submit">Send</button>
-                        </p>
-                    </form>
-                    <!-- 
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="contact" method="POST">
+                        <!-- NAME AND EMAIL-->
                         <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
                             <div class="col">
                                 <label for="name"></label>
@@ -52,6 +59,7 @@ export default {
                             </div>
                         </div>
 
+                        <!-- TEXTAREA -->
                         <div class="mb-3 row">
                             <div class="col">
                                 <label for="message"></label>
@@ -63,7 +71,7 @@ export default {
                                 </div>
                             </div>
                         </div>
-                    </form> -->
+                    </form>
                 </div>
             </div>
 
