@@ -61,7 +61,24 @@ export default {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 932px) {
+    .container {
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: .7rem;
+        }
+
+        span {
+            font-size: .6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
     .container {
         .giphy-embed {
             width: 350px;
