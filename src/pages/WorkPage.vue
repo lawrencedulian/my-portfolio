@@ -19,8 +19,7 @@ export default {
                         "laravel",
                         "api",
                         "mysql"
-                    ],
-                    isResponsive: true,
+                    ]
                 },
                 {
                     //BOOLFLIX
@@ -32,7 +31,7 @@ export default {
                         "css",
                         "api",
                         "javascript"
-                    ],
+                    ]
                 },
                 {
                     //BOOLZAPP
@@ -131,12 +130,7 @@ export default {
                         </ul>
                     </div>
 
-                    <div class="position-relative">
-                        <!-- Font Awesome icons -->
-                        <i v-if="work.isResponsive" class="fas fa-laptop position-absolute laptop-icon"></i>
-
-                        <img class="mb-5 cover" :src="getImage(`/img/projects/${work.cover}`)" alt="">
-                    </div>
+                    <img class="mb-5 cover" :src="getImage(`/img/projects/${work.cover}`)" alt="">
                 </div>
             </div>
         </section>
@@ -180,21 +174,6 @@ h4 {
     border: 1px solid var(--text-color);
     border-radius: 20px;
     padding: .2rem .5rem .2rem .5rem;
-}
-
-.laptop-icon,
-.mobile-icon {
-    font-size: 2rem;
-    color: #fff;
-    /* Colore dell'icona */
-    top: 10px;
-    /* Posizionamento dall'alto */
-    left: 10px;
-    /* Posizionamento da sinistra */
-    z-index: 1;
-    /* Per sovrapporre l'icona all'immagine */
-
-    background-color: gray;
 }
 
 @media screen and (max-width: 991px) {
