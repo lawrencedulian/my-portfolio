@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage.vue";
 import WorkPage from "./pages/WorkPage.vue";
 import AboutPage from "./pages/AboutPage.vue";
 import ContactPage from "./pages/ContactPage.vue";
+import notFound from "./pages/notFound.vue";
 
 const bgColor= '#fffeee';
 const bgColorSecondary='#f6f4fb';
@@ -35,6 +36,11 @@ const router = createRouter({
             component: ContactPage,
             meta: { bgColor: bgColorSecondary}
         },
+        {
+            path: "/:pathMatch(.*)*",
+            name: 'fail',
+            component: notFound
+        }
     ]
 });
 
