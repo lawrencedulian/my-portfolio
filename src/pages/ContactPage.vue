@@ -18,7 +18,27 @@ export default {
             <div class="row">
                 <div class="col-12 col-lg-8 col-md-12">
                     <form name="contact" method="POST" data-netlify="true">
-                        <!-- NAME AND EMAIL-->
+                        <p>
+                            <label>Your Name: <input type="text" name="name" /></label>
+                        </p>
+                        <p>
+                            <label>Your Email: <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                            <label>Your Role: <select name="role[]" multiple>
+                                    <option value="leader">Leader</option>
+                                    <option value="follower">Follower</option>
+                                </select></label>
+                        </p>
+                        <p>
+                            <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </form>
+                    <!-- 
+                    <form name="contact" method="POST" data-netlify="true">
                         <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
                             <div class="col">
                                 <label for="name"></label>
@@ -32,7 +52,6 @@ export default {
                             </div>
                         </div>
 
-                        <!-- TEXTAREA -->
                         <div class="mb-3 row">
                             <div class="col">
                                 <label for="message"></label>
@@ -44,7 +63,7 @@ export default {
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
 
