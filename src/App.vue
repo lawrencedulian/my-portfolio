@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
+import pageSlideTransition from './components/pageSlideTransition.vue';
 
 export default {
     components: {
         AppHeader,
         AppFooter,
+        pageSlideTransition
     },
     data() {
         return {
@@ -59,9 +61,9 @@ export default {
 
     <main :style="{ backgroundColor: routeBgColor }">
         <router-view v-slot="{ Component }">
-            <transition name="page-slide" mode="out-in">
+            <pageSlideTransition>
                 <component :is="Component" />
-            </transition>
+            </pageSlideTransition>
         </router-view>
     </main>
 
@@ -70,40 +72,6 @@ export default {
 
 <style lang="scss" scoped>
 @use './styles/general.scss' as *;
-
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-    opacity: 0;
-}
-
-.page-opacity-enter-active,
-.page-opacity-leave-active {
-    transition: 5s ease all;
-}
-
-.page-opacity-enter-from,
-.page-opacity-leave-to {
-    opacity: 0;
-}
-
-.page-slide-enter-active {
-    transition: 1500ms ease all;
-}
-
-.page-slide-leave-active {
-    transition: 500ms ease all;
-}
-
-.page-slide-enter-from,
-.page-slide-leave-to {
-    opacity: 0;
-    transform: translateY(60px);
-}
 
 .overlay {
     position: fixed;
