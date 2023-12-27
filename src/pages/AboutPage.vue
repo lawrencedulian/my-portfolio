@@ -39,12 +39,12 @@ export default {
     <div class="container">
         <!-- ABOUT ME SECTION -->
         <section class="about-me row">
-            <div class="col-6 d-flex align-items-center justify-content-end">
+            <div class="col-5 col-lg-6 d-flex align-items-center justify-content-end">
                 <div class="bar">
                     <div class="progress"></div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-7 col-lg-6">
                 <h2 class="title">about me</h2>
             </div>
 
@@ -52,7 +52,7 @@ export default {
                 <img class="profile m-0" src="../assets/img/profile.jpeg" alt="">
             </div>
             <div class="text col-lg-6 col-md-12 d-flex flex-column justify-content-end">
-                <p class="description text-justify m-0">
+                <p class="description text-justify">
                     Hello, I'm Lawrence, a junior full-stack web developer based in sunny Messina, Sicily, where it feels
                     like summer all year round. I'm deeply passionate about technology and have a relentless drive to
                     enhance my skills and embrace new technologies.
@@ -189,6 +189,10 @@ p {
     .title {
         font-size: 5rem;
     }
+
+    .description {
+        margin-bottom: 0;
+    }
 }
 
 .cv {
@@ -217,6 +221,10 @@ p {
     .about-me {
         .title {
             font-size: 4rem;
+        }
+
+        .description {
+            margin-top: 1rem;
         }
     }
 

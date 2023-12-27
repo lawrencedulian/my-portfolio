@@ -52,7 +52,7 @@ main {
 .bar {
     position: relative;
     width: 62.5%;
-    height: .5px;
+    height: 1px;
     overflow: hidden; 
     display: flex;
     align-items: end;
@@ -75,8 +75,13 @@ main {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .bar {
+     width: 100%;
+    }
+ }
 @media screen and (max-width: 768px) {
    .bar {
-    width: 80%;
+    width: 100%;
    }
 }
