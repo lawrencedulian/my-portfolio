@@ -9,35 +9,36 @@ export default {
                     //BOOLBNB
                     title: "Boolbnb",
                     cover: "boolbnb.png",
-                    description: "Airbnb replica project",
+                    description: "is a web app that allows you to find and manage apartment rentals.",
                     programmingLanguage: [
                         "html",
                         "css",
                         "javascript",
                         "vue",
-                        "php",
                         "laravel",
                         "api",
                         "mysql"
-                    ]
+                    ],
+                    github: "https://github.com/sder12/vue-boolbnb",
                 },
                 {
                     //BOOLFLIX
                     title: "Boolflix",
                     cover: "boolflix.png",
-                    description: "Replica ui of Netflix, added filter function",
+                    description: "replica ui of Netflix, using the movie databse (TMDB) to search film and series",
                     programmingLanguage: [
                         "html",
                         "css",
                         "api",
-                        "javascript"
+                        "javascript",
+                        "vue"
                     ]
                 },
                 {
                     //BOOLZAPP
                     title: "Boolzapp",
                     cover: "boolzapp.png",
-                    description: "Replica ui of Whatsapp, added send message function",
+                    description: "replica old ui of Whatsapp, added send message function",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -111,7 +112,11 @@ export default {
     <div class="container">
         <!-- WORK HEADING -->
         <section class="work row">
-            <div class="col-6"></div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                <div class="bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
             <div class="col-6">
                 <h2 class="title">works</h2>
             </div>

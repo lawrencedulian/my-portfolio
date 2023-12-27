@@ -48,3 +48,35 @@ main {
     top: 8px;
     
 }
+
+.bar {
+    position: relative;
+    width: 62.5%;
+    height: .5px;
+    overflow: hidden; 
+    display: flex;
+    align-items: end;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Inizia con la larghezza zero */
+    height: 100%;
+    background-color: var(--text-color); /* Cambia il colore se preferisci */
+    animation: progressBar 3s ease forwards; /* Durata 3 secondi */
+}
+
+/* Animazione della barra di avanzamento */
+@keyframes progressBar {
+    to {
+        width: 100%; /* Alla fine dell'animazione, larghezza al 100% */
+    }
+}
+
+@media screen and (max-width: 768px) {
+   .bar {
+    width: 80%;
+   }
+}

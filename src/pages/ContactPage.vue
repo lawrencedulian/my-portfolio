@@ -8,7 +8,11 @@ export default {
 <template>
     <div class="container">
         <section class="contact row">
-            <div class="col-6"></div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                <div class="bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
             <div class="col-6">
                 <h2 class="title">contact</h2>
             </div>
