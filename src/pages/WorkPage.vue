@@ -1,6 +1,10 @@
 <script>
+import scrollToTopButton from '../components/scrollToTopButton.vue';
 export default {
     name: "WorkPage",
+    components: {
+        scrollToTopButton
+    },
     data() {
         return {
             // WORKS
@@ -140,6 +144,8 @@ export default {
             </div>
         </section>
         <!-- /WORK PROJECTS -->
+
+        <scrollToTopButton></scrollToTopButton>
     </div>
     <!-- /CONTAINER -->
 </template>

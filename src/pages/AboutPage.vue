@@ -1,8 +1,12 @@
 <script>
 import { store } from '../store';
+import scrollToTopButton from '../components/scrollToTopButton.vue';
 
 export default {
     name: "AboutPage",
+    components: {
+        scrollToTopButton
+    },
     data() {
         return {
             store,
@@ -154,6 +158,8 @@ export default {
             </div>
         </section>
         <!-- /CV SECTION -->
+
+        <scrollToTopButton></scrollToTopButton>
     </div>
     <!-- /CONTAINER -->
 </template>
