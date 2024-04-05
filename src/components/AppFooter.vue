@@ -25,7 +25,7 @@ export default {
                     <a :href="social.link" v-for="(social, index) in store.social" :key="index">
                         <i :class="social.icon"></i>
                     </a>
-                    <span class="text-white pe-none d-none d-md-block">lawrenceedulian@gmail.com</span>
+                    <span class="text-white pe-none d-none d-md-block">lawrence@edulian.it</span>
                 </div>
             </div>
         </section>

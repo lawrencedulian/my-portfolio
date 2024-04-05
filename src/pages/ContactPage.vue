@@ -21,7 +21,7 @@ export default {
         <section class="contact-form mt-3">
             <div class="row">
                 <div class="col-12 col-lg-8 col-md-12">
-                    <form name="contact" method="POST" netlify>
+                    <form name="contact" method="POST" data-netlify="true" onsubmit="submit">
                         <!-- NAME AND EMAIL-->
                         <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
                             <div class="col">
