@@ -21,7 +21,13 @@ export default {
         <section class="contact-form mt-3">
             <div class="row">
                 <div class="col-12 col-lg-8 col-md-12">
-                    <form name="contact" method="POST" data-netlify="true" onsubmit="submit">
+                    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+                        <input type="text" name="name" />
+                        <input type="radio" name="panelist" />
+                        <textarea name="question"></textarea>
+                    </form>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="name" value="name" />
                         <!-- NAME AND EMAIL-->
                         <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
                             <div class="col">
@@ -48,17 +54,6 @@ export default {
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <form name="contact" netlify>
-                        <p>
-                            <label>Name <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                            <label>Email <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <button type="submit">Send</button>
-                        </p>
                     </form>
                 </div>
             </div>
