@@ -26,8 +26,8 @@ export default {
                         <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
                             <div class="col">
                                 <label for="name"></label>
-                                <input type="text" class="my-form-control" id="name" name="name" placeholder="Name" required
-                                    aria-label="Name">
+                                <input type="text" class="my-form-control" id="name" name="name" placeholder="Name"
+                                    required aria-label="Name">
                             </div>
                             <div class="col">
                                 <label for="email"></label>
@@ -48,6 +48,17 @@ export default {
                                 </div>
                             </div>
                         </div>
+                    </form>
+                    <form name="contact" netlify>
+                        <p>
+                            <label>Name <input type="text" name="name" /></label>
+                        </p>
+                        <p>
+                            <label>Email <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
                     </form>
                 </div>
             </div>
