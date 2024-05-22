@@ -21,6 +21,12 @@ export const store = reactive({
     // EXPERIENCE
     experience: [
         {
+            title: 'Full Stack Web Developer',
+            company: 'Cleverativity',
+            period: 'JANUARY 2024',
+            description: 'Tailored industrial websites focused specifically for heat exchangers and constant real-time support.'
+        },
+        {
             title: 'Junior Full Stack Web Developer Trainee',
             company: 'Boolean',
             period: 'SEPTEMBER 2022 - FEBRUARY 2023',

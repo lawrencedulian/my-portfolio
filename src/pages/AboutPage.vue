@@ -15,6 +15,8 @@ export default {
                 "HTML5",
                 "CSS3/Sass",
                 "Javascript ES6",
+                "Typescript",
+                "PHP",
                 "SQL",
             ],
 
@@ -22,7 +24,8 @@ export default {
             frameworks: [
                 "Vue 3",
                 "Bootstrap 5",
-                "Laravel 9"
+                "Laravel 9",
+                "Quasar"
             ],
 
             // TOOLS
@@ -57,7 +60,8 @@ export default {
             </div>
             <div class="text col-lg-6 col-md-12 d-flex flex-column justify-content-end">
                 <p class="description text-justify">
-                    Hello, I'm Lawrence, a junior full-stack web developer based in sunny Messina, Sicily, where it feels
+                    Hello, I'm Lawrence, a junior full-stack web developer based in sunny Messina, Sicily, where it
+                    feels
                     like summer all year round. I'm deeply passionate about technology and have a relentless drive to
                     enhance my skills and embrace new technologies.
 
@@ -69,7 +73,8 @@ export default {
                     knowledge. Whether it's collaborating on projects, or finding internships, I'm open to
                     exciting opportunities in the tech and design space.
 
-                    When I'm not immersed in code and design, you'll find me hitting the streets on my bicycle, enjoying the
+                    When I'm not immersed in code and design, you'll find me hitting the streets on my bicycle, enjoying
+                    the
                     beautiful strait of Messina, or on the hunt for the next netflix series to binge.
 
                     I'm excited about the journey ahead, eager to learn, and ready to contribute to the tech and design

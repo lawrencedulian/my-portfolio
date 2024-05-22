@@ -30,7 +30,7 @@ export default {
         <div class="home p-4">
             <h3 class="subtitle mb-2">Hello! 👋 I am,</h3>
             <img class="title ps-3 pe-3" :src="currentImageUrl" alt="Name" />
-            <h3 class="subtitle mt-2 text-end">- front end web developer</h3>
+            <h3 class="subtitle mt-2 text-end">- full stack web developer</h3>
         </div>
         <!-- /HOME -->
     </div>
