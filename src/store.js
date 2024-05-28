@@ -23,7 +23,7 @@ export const store = reactive({
         {
             title: 'Full Stack Web Developer',
             company: 'Cleverativity',
-            period: 'JANUARY 2024',
+            period: 'JANUARY 2024 - PRESENT',
             description: 'Tailored industrial websites focused specifically for heat exchangers and constant real-time support.'
         },
         {
