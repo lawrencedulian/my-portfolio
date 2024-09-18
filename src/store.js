@@ -5,6 +5,12 @@ export const store = reactive({
     // EDUCATION
     education: [
         {
+            school: 'Nextar',
+            qualification: 'Microsoft Sharepoint',
+            period: 'SEPTEMBER 2023 - NOVEMBER 2023',
+            description: '120-hour course aimed at understanding the Office 365 ecosystem. I gained new knowledge and skills in SharePoint online, Power Automate, Power Apps and Power Platform.'
+        },
+        {
             school: 'Boolean Careers',
             qualification: 'Master Full Stack Web Developer',
             period: 'SEPTEMBER 2022 - FEBRUARY 2023',
@@ -21,7 +27,7 @@ export const store = reactive({
     // EXPERIENCE
     experience: [
         {
-            title: 'Full Stack Web Developer',
+            title: 'Frontend Developer',
             company: 'Cleverativity',
             period: 'JANUARY 2024 - PRESENT',
             description: 'Tailored industrial websites focused specifically for heat exchangers and constant real-time support.'

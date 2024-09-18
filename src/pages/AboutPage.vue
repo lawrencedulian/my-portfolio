@@ -158,7 +158,7 @@ export default {
             </div>
 
             <div class="col">
-                <a class="btn btn-lg btn-blue rounded-pill"
+                <a class="btn btn-lg btn-blue rounded-pill disabled"
                     onclick="window.open('/lawrence-edulian-cv-eng.pdf', '_blank'); return false">ENGLISH</a>
             </div>
         </section>
