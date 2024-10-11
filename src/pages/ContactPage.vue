@@ -1,6 +1,26 @@
 <script>
 export default {
     name: "ContactPage",
+    methods: {
+        encode(data) {
+            return Object.keys(data)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}` ).join('&')
+        },
+        handleSubmit() {
+            fetch('/', {
+                method: 'post',
+                headers: {
+                    'Content-Type' : 'application/x-www-form-urlencoded'
+                },
+                body: this.encode({
+                    'form-name' : 'contact',
+                    ...this.form
+                })
+            })
+            .then(() => console.log("successfully sent"))
+            .catch(e => console.error(e))
+        }
+    }
 };
 </script>
 
@@ -21,7 +41,7 @@ export default {
         <section class="contact-form mt-3">
             <div class="row">
                 <div class="col-12 col-lg-8 col-md-12">
-                  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
+                  <form @submit.prevent="handleSubmit" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
                     <input name="bot-field" class="d-none">
                     <div class="form-row">
                         <div class="form-group col-md-6 mt-3">
