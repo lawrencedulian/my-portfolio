@@ -25,7 +25,8 @@ export default {
                 "Vue 3",
                 "Bootstrap 5",
                 "Laravel 9",
-                "Quasar"
+                "Quasar",
+                "React (Learning)"
             ],
 
             // TOOLS
@@ -60,7 +61,7 @@ export default {
             </div>
             <div class="text col-lg-6 col-md-12 d-flex flex-column justify-content-end">
                 <p class="description text-justify">
-                    Hello, I'm Lawrence, a junior full-stack web developer based in sunny Messina, Sicily, where it
+                    <!-- Hello, I'm Lawrence, a junior full-stack web developer based in sunny Messina, Sicily, where it
                     feels
                     like summer all year round. I'm deeply passionate about technology and have a relentless drive to
                     enhance my skills and embrace new technologies.
@@ -78,7 +79,8 @@ export default {
                     beautiful strait of Messina, or on the hunt for the next netflix series to binge.
 
                     I'm excited about the journey ahead, eager to learn, and ready to contribute to the tech and design
-                    communities. Let's connect and explore the possibilities together!"
+                    communities. Let's connect and explore the possibilities together!" -->
+                    Hi! I'm Lawrence, a frontend developer. I have a passion for technology and I'm currently diving into the world of React. My interest in UX/UI design drives me to create intuitive and engaging user experiences. When I'm not working, I enjoy biking and exploring nature, drawing inspiration from the beautiful landscapes around me. Right now, I'm looking to expand my professional network, so feel free to connect with me on LinkedIn. I’d love to connect and exchange ideas!
 
                 </p>
             </div>

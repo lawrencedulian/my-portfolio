@@ -21,7 +21,7 @@ export default {
 <template>
     <header class="d-flex align-items-center" :style="{ backgroundColor: routeBgColor }">
         <div class="position-relative d-md-none">
-            <div class="menu-wrapper position-absolute top-50 start-0 translate-middle-y" @click="toggleMenu">
+            <div class="menu-wrapper position-absolute top-50 end-0 translate-middle-y" @click="toggleMenu">
                 <div class="menu-bar one"></div>
                 <div class="menu-bar two"></div>
             </div>
@@ -81,8 +81,12 @@ header {
         font-weight: 500;
     }
 
+    .position-relative {
+        width: 100%;
+    }
+    
     .menu-wrapper {
-        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 </style>

@@ -8,19 +8,19 @@ export const store = reactive({
             school: 'Nextar',
             qualification: 'Microsoft Sharepoint',
             period: 'SEPTEMBER 2023 - NOVEMBER 2023',
-            description: '120-hour course aimed at understanding the Office 365 ecosystem. I gained new knowledge and skills in SharePoint online, Power Automate, Power Apps and Power Platform.'
+            description: '120-hour course focused on deepening knowledge of the Office 365 ecosystem. I acquired skills in SharePoint Online, Power Automate, Power Apps, and Power Platform.'
         },
         {
             school: 'Boolean Careers',
             qualification: 'Master Full Stack Web Developer',
             period: 'SEPTEMBER 2022 - FEBRUARY 2023',
-            description: 'Intensive course of 700 theoretical and practical hours during which I had the opportunity to study and master the main back-end and front-end technologies sush as: html, css, bootstrap, laravel, mysql.'   
+            description: 'Intensive 700-hour theoretical and practical course during which I had the opportunity to study and master the main backend and frontend technologies.'   
         },
         {
             school: 'IIS Verona Trento',
             qualification: 'Diploma in Computer Science',
             period: 'SEPTEMBER 2013 - JULY 2019',
-            description: 'I have learned specific skills in IT systems, information processing, web applications, and technologies, as well as networks and communication equipment. Additionally, I have gained a foundation in C, C++, and Java programming languages.'
+            description: 'Skills in information systems, information processing, web applications and technologies, as well as networks and communication devices.'
         }
     ],
 
@@ -30,20 +30,20 @@ export const store = reactive({
             title: 'Frontend Developer',
             company: 'Cleverativity',
             period: 'JANUARY 2024 - PRESENT',
-            description: 'Tailored industrial websites focused specifically for heat exchangers and constant real-time support.'
+            description: 'Development of websites for the industrial sector with real-time support. Optimization of user experience through the implementation of responsive and functional interfaces.'
         },
         {
             title: 'Junior Full Stack Web Developer Trainee',
             company: 'Boolean',
             period: 'SEPTEMBER 2022 - FEBRUARY 2023',
-            description: 'Intensive six months course, I learned the basics of programming for web development from scratch. Thanks to the theoretical lessons and practical exercises, I managed to carry out various projects and replicate web applications known both on the FrontEnd and BackEnd side. At the end of the course, together with my team we created a final project using frameworks, specifically Vue on the front-end side and Laravel on the back-end side for the creation of a BnB site. We have implemented several features, such as an advanced search system to find accommodation based on specific criteria.'
+            description: 'Intensive six-month course where I learned the fundamentals of web development from scratch. At the end of the course, I developed a web application using Vue and Laravel, putting the acquired skills into practice.'
         },
-        {
-            title: 'Wine Manager',
-            company: 'Cantine Madaudo S.r.l.',
-            period: 'APRIL 2020 - AUGUST 2022',
-            description: 'Wine production and bottling manager. Management of the main activities of the company.'
-        }
+        // {
+        //     title: 'Wine Manager',
+        //     company: 'Cantine Madaudo S.r.l.',
+        //     period: 'APRIL 2020 - AUGUST 2022',
+        //     description: 'Wine production and bottling manager. Management of the main activities of the company.'
+        // }
     ],
 
     // SKILLS
@@ -64,11 +64,6 @@ export const store = reactive({
             name: 'github',
             link: 'https://github.com/lawrencedulian',
             icon: 'fa-brands fa-github'
-        },
-        {
-            name: 'instagram',
-            link: 'https://www.instagram.com/lawrenceedulian/',
-            icon: 'fa-brands fa-instagram'
         },
         {
             name: 'linkedin',

@@ -34,11 +34,12 @@ export default {
 <template>
     <div class="overlay d-md-none" :class="{ 'show': isMenuOpen }" v-if="isMenuOpen" @click="closeMenu">
         <div class="position-relative">
-            <div class="menu-wrapper position-absolute top-50 start-0 translate-middle-y" @click="toggleMenu">
+            <div class="menu-wrapper position-absolute top-50 end-0 translate-middle-y" @click="toggleMenu">
                 <div class="menu-bar one"></div>
                 <div class="menu-bar two"></div>
             </div>
         </div>
+        
         <div class="overlay-content position-absolute top-50 start-0 translate-middle-y">
             <ul class="d-flex flex-column align-items-start">
                 <li>
@@ -122,7 +123,7 @@ export default {
 }
 
 .menu-wrapper {
-    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     margin-top: 2rem;
 }
 </style>
