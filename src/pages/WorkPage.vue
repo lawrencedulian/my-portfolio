@@ -131,7 +131,7 @@ export default {
         <section class="work-projects row row-cols-md-2 mt-5">
             <div class="col-12" v-for="(work, index) in works" :key="index">
                 <div class="container">
-                    <div class="text">
+                    <div class="text mb-3">
                         <h4>{{ work.title }}</h4>
                         <p>{{ work.description }}</p>
                         <ul class="d-flex flex-wrap align-items-center">
@@ -139,7 +139,7 @@ export default {
                         </ul>
                     </div>
 
-                    <img class="mb-5 cover" :src="getImage(`/img/projects/${work.cover}`)" alt="">
+                    <img class="cover mb-5" :src="getImage(`/img/projects/${work.cover}`)" alt="">
                 </div>
             </div>
         </section>
@@ -170,8 +170,6 @@ h4 {
 }
 
 .text {
-    height: 170px;
-
     .pl:first-child {
         margin-left: 0;
     }
@@ -184,6 +182,7 @@ h4 {
 .pl {
     border: 1px solid var(--text-color);
     border-radius: 20px;
+    font-size: .8rem;
     padding: .2rem .5rem .2rem .5rem;
 }
 
