@@ -57,7 +57,7 @@ export default {
             </div>
 
             <div class="col-lg-6 d-flex justify-content-end">
-                <img class="profile m-0" src="../assets/img/profile.jpeg" alt="">
+                <!-- <img class="profile m-0" src="../assets/img/profile.jpeg" alt=""> -->
             </div>
             <div class="text col-lg-6 col-md-12 d-flex flex-column justify-content-end">
                 <p class="description text-justify">
