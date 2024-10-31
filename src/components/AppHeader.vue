@@ -40,16 +40,16 @@ export default {
                         <li>
                             <router-link :to="'/about'" class="nav-link">ABOUT</router-link>
                         </li>
-                        <li>
+                        <!-- <li>
                             <router-link :to="'/contact'" class="nav-link">CONTACT</router-link>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </div>
     </header>
 </template>
-  
+
 
 <style lang="scss">
 header {
@@ -84,10 +84,9 @@ header {
     .position-relative {
         width: 100%;
     }
-    
+
     .menu-wrapper {
         margin-right: 1.5rem;
     }
 }
 </style>
-    
