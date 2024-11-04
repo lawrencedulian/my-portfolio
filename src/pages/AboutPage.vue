@@ -80,7 +80,11 @@ export default {
 
                     I'm excited about the journey ahead, eager to learn, and ready to contribute to the tech and design
                     communities. Let's connect and explore the possibilities together!" -->
-                    Hi! I'm Lawrence, a frontend developer. I have a passion for technology and I'm currently diving into the world of React. My interest in UX/UI design drives me to create intuitive and engaging user experiences. When I'm not working, I enjoy biking and exploring nature, drawing inspiration from the beautiful landscapes around me. Right now, I'm looking to expand my professional network, so feel free to connect with me on LinkedIn. I’d love to connect and exchange ideas!
+                    Hi! I'm Lawrence, a frontend developer. I have a passion for technology and I'm currently diving
+                    into the world of React. My interest in UX/UI design drives me to create intuitive and engaging user
+                    experiences. When I'm not working, I enjoy biking and exploring nature, drawing inspiration from the
+                    beautiful landscapes around me. Right now, I'm looking to expand my professional network, so feel
+                    free to connect with me on LinkedIn. I’d love to connect and exchange ideas!
 
                 </p>
             </div>
@@ -160,7 +164,7 @@ export default {
             </div>
 
             <div class="col">
-                <a class="btn btn-lg btn-blue rounded-pill disabled"
+                <a class="btn btn-lg btn-blue rounded-pill"
                     onclick="window.open('/lawrence-edulian-cv-eng.pdf', '_blank'); return false">ENGLISH</a>
             </div>
         </section>
