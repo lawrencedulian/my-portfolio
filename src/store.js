@@ -14,13 +14,13 @@ export const store = reactive({
             school: 'Boolean Careers',
             qualification: 'Master Full Stack Web Developer',
             period: 'SEPTEMBER 2022 - FEBRUARY 2023',
-            description: 'Intensive 700-hour theoretical and practical course during which I had the opportunity to study and master the main backend and frontend technologies.'   
+            description: 'Intensive six-month course where I learned the fundamentals of webdevelopment programming from scratch. At the end of the course, Ideveloped a web application using Vue and Laravel, applying the skills Ihad acquired.'   
         },
         {
             school: 'IIS Verona Trento',
             qualification: 'Diploma in Computer Science',
             period: 'SEPTEMBER 2013 - JULY 2019',
-            description: 'Skills in information systems, information processing, web applications and technologies, as well as networks and communication devices.'
+            description: 'Skills  in  information  systems,  data  processing,  web  applications  andtechnologies, as well as in networks and communication devices.'
         }
     ],
 
@@ -30,13 +30,18 @@ export const store = reactive({
             title: 'Frontend Developer',
             company: 'Cleverativity',
             period: 'JANUARY 2024 - PRESENT',
-            description: 'Development of websites for the industrial sector with real-time support. Optimization of user experience through the implementation of responsive and functional interfaces.'
-        },
-        {
-            title: 'Junior Full Stack Web Developer Trainee',
-            company: 'Boolean',
-            period: 'SEPTEMBER 2022 - FEBRUARY 2023',
-            description: 'Intensive six-month course where I learned the fundamentals of web development from scratch. At the end of the course, I developed a web application using Vue and Laravel, putting the acquired skills into practice.'
+            description: 'Frontend developer in a company working on industrial/mechanical projects. My responsibilities include:',
+            work: [
+               "Developing responsive and intuitive user interfaces to enhance overall user experience.",
+               "Creating and maintaining customizable websites for heat exchangers based on technical input from clients.",
+               "Collaborating with the team to integrate feedback and optimize sitefunctionality, ensuring that client requirements are fully met.",
+               "Utilizing a technology  stack (Vue, Quasar, TypeScript) to build reusable and maintainable components.",
+               "Support: Managing entire projects and coordinating work  for colleagues by distributing tasks and providing support to meet deadlines.",
+               "Communication and Problem-Solving: Actively participating in sprint meetings to update the team on tasks and challenges, and independently conducting client meetings to present progress and address technical questions.",
+               "Independently completing most tasks while effectively  solvingtechnical issues and meeting deadlines.",
+               "English Proficiency: Fluent in English, enabling effective communication and collaboration with international colleagues."
+            ]
+            
         },
         // {
         //     title: 'Wine Manager',

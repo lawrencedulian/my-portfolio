@@ -80,12 +80,12 @@ export default {
 
                     I'm excited about the journey ahead, eager to learn, and ready to contribute to the tech and design
                     communities. Let's connect and explore the possibilities together!" -->
-                    Hi! I'm Lawrence, a frontend developer. I have a passion for technology and I'm currently diving
-                    into the world of React. My interest in UX/UI design drives me to create intuitive and engaging user
-                    experiences. When I'm not working, I enjoy biking and exploring nature, drawing inspiration from the
-                    beautiful landscapes around me. Right now, I'm looking to expand my professional network, so feel
-                    free to connect with me on LinkedIn. I’d love to connect and exchange ideas!
-
+                    Hi! I'm Lawrence, a frontend developer with a solid foundation in HTML, CSS, JavaScript and Vue. I
+                    have experience in industrial projects where I collaborated with development teams to enhance the
+                    usability and functionality of websites. Expanding my skill set with React to diversify my frontend
+                    expertise. I am seeking an opportunity in an innovative environment that values UX/UI design. In my
+                    free time, I love exploring nature andgoing on long bike rides to unwind. Feel free to connect
+                    with me on LinkedIn. I’d love to connect and exchange ideas!
                 </p>
             </div>
         </section>
@@ -129,6 +129,9 @@ export default {
                         <h4>{{ exp.company }}</h4>
                         <p>{{ exp.period }}</p>
                         <p class="font-weight-100">{{ exp.description }}</p>
+                        <ul v-if="exp.work" class="font-weight-100">
+                            <li v-for="(item, i) in exp.work" :key="i">{{ item }}</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -182,6 +185,16 @@ p {
 
 .font-weight-100 {
     font-weight: 100;
+}
+
+.work-experience {
+    li {
+        list-style-type: disc;
+    }
+
+    .list:first-child {
+        list-style-type: none;
+    }
 }
 
 .work-experience,
