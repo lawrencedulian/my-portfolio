@@ -38,7 +38,7 @@ export const store = reactive({
                "Utilizing a technology  stack (Vue, Quasar, TypeScript) to build reusable and maintainable components.",
                "Support: Managing entire projects and coordinating work  for colleagues by distributing tasks and providing support to meet deadlines.",
                "Communication and Problem-Solving: Actively participating in sprint meetings to update the team on tasks and challenges, and independently conducting client meetings to present progress and address technical questions.",
-               "Independently completing most tasks while effectively  solvingtechnical issues and meeting deadlines.",
+               "Independently completing most tasks while effectively  solving technical issues and meeting deadlines.",
                "English Proficiency: Fluent in English, enabling effective communication and collaboration with international colleagues."
             ]
             

@@ -130,7 +130,9 @@ export default {
                         <p>{{ exp.period }}</p>
                         <p class="font-weight-100">{{ exp.description }}</p>
                         <ul v-if="exp.work" class="font-weight-100">
-                            <li v-for="(item, i) in exp.work" :key="i">{{ item }}</li>
+                            <li class="" v-for="(item, i) in exp.work" :key="i">
+                                <p>{{ item }}</p>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -299,13 +301,6 @@ p {
     .about-me {
         .title {
             font-size: 3rem;
-        }
-
-        .profile {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            object-fit: cover;
         }
 
         .text {
