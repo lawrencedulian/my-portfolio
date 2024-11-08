@@ -10,10 +10,23 @@ export default {
             // WORKS
             works: [
                 {
+                    //REACT TODO-LIST
+                    title: "Todo-List",
+                    cover: "react-todolist.png",
+                    description: "Simple to-do list created to learn the fundamentals of React, focusing on props, state, and component structure.",
+                    programmingLanguage: [
+                        "html",
+                        "css",
+                        "javascript",
+                        "react"
+                    ],
+                    github: "https://github.com/lawrencedulian/react-todolist"
+                },
+                {
                     //BOOLBNB
                     title: "Boolbnb",
                     cover: "boolbnb.png",
-                    description: "is a web app that allows you to find and manage apartment rentals.",
+                    description: "Is a web app that allows you to find and manage apartment rentals.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -29,7 +42,7 @@ export default {
                     //BOOLFLIX
                     title: "Boolflix",
                     cover: "boolflix.png",
-                    description: "replica ui of Netflix, using the movie databse (TMDB) to search film and series",
+                    description: "Replica ui of Netflix, using the movie databse (TMDB) to search film and series",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -42,7 +55,7 @@ export default {
                     //BOOLZAPP
                     title: "Boolzapp",
                     cover: "boolzapp.png",
-                    description: "replica old ui of Whatsapp, added send message function",
+                    description: "Replica old ui of Whatsapp, added send message function",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -131,10 +144,10 @@ export default {
         <section class="work-projects row row-cols-md-2 mt-5">
             <div class="col-12" v-for="(work, index) in works" :key="index">
                 <div class="container">
-                    <div class="text mb-3">
+                    <div class="text mb-2">
                         <h4>{{ work.title }}</h4>
-                        <p>{{ work.description }}</p>
-                        <ul class="d-flex flex-wrap align-items-center">
+                        <p class="work-desc">{{ work.description }}</p>
+                        <ul class="d-flex flex-nowrap align-items-center">
                             <li v-for="pl in work.programmingLanguage" :key="pl" class="pl">{{ pl }}</li>
                         </ul>
                     </div>
@@ -158,7 +171,6 @@ export default {
 h4 {
     border-bottom: 1px solid var(--text-color);
 }
-
 
 .cover {
     width: 100%;
@@ -184,6 +196,13 @@ h4 {
     border-radius: 20px;
     font-size: .8rem;
     padding: .2rem .5rem .2rem .5rem;
+}
+
+.work-projects {
+    ul {
+        max-width: 100%;
+        overflow-x: auto;
+    }
 }
 
 @media screen and (max-width: 991px) {
