@@ -1,6 +1,5 @@
 <script>
 import scrollToTopButton from '../components/scrollToTopButton.vue';
-import Flickity from 'flickity';
 export default {
     name: "WorkPage",
     components: {
