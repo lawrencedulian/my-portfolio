@@ -1,5 +1,6 @@
 <script>
 import scrollToTopButton from '../components/scrollToTopButton.vue';
+import Flickity from 'flickity';
 export default {
     name: "WorkPage",
     components: {
@@ -9,6 +10,19 @@ export default {
         return {
             // WORKS
             works: [
+                {
+                    //REACT NASA-API
+                    title: "NASA API",
+                    cover: ["react-nasa-1.png", "react-nasa-2.png"],
+                    description: "React using NASA API",
+                    programmingLanguage: [
+                        "html",
+                        "css",
+                        "javascript",
+                        "react"
+                    ],
+                    github: "https://github.com/lawrencedulian/react-todolist"
+                },
                 {
                     //REACT TODO-LIST
                     title: "Todo-List",
@@ -143,17 +157,35 @@ export default {
         <!-- WORK PROJECTS -->
         <section class="work-projects row row-cols-md-2 mt-5">
             <div class="col-12" v-for="(work, index) in works" :key="index">
-                <div class="container">
-                    <div class="text mb-2">
-                        <h4>{{ work.title }}</h4>
-                        <p class="work-desc">{{ work.description }}</p>
-                        <ul class="d-flex flex-nowrap align-items-center">
-                            <li v-for="pl in work.programmingLanguage" :key="pl" class="pl">{{ pl }}</li>
-                        </ul>
-                    </div>
-
-                    <img class="cover mb-5" :src="getImage(`/img/projects/${work.cover}`)" alt="">
+                <div class="text mb-2">
+                    <h4>{{ work.title }}</h4>
+                    <p class="work-desc">{{ work.description }}</p>
+                    <ul class="d-flex flex-nowrap align-items-center">
+                        <li v-for="pl in work.programmingLanguage" :key="pl" class="pl">{{ pl }}</li>
+                    </ul>
                 </div>
+
+                <div v-if="Array.isArray(work.cover) && work.cover.length > 1">
+
+                    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-slide active" v-for="(img, index) in work.cover" :key="index">
+                                    <img class="cover mb-5" :src="getImage(`/img/projects/${img}`)" alt="" />
+                                </div>
+
+                            </div>
+                        </div> -->
+                    <div class="carousel-slide" v-for="(img, index) in work.cover" :key="index">
+                        <img class="cover mb-5" :src="getImage(`/img/projects/${img}`)" alt="" />
+                    </div>
+                </div>
+
+                <img v-else class="cover mb-5" :src="getImage(`/img/projects/${work.cover}`)" alt="" />
             </div>
         </section>
         <!-- /WORK PROJECTS -->
@@ -174,8 +206,7 @@ h4 {
 
 .cover {
     width: 100%;
-    max-width: 600px;
-    height: 350px;
+    height: 340px;
     object-fit: cover;
     object-position: top;
     box-shadow: 3px 3px 1px #ccc;
@@ -209,5 +240,23 @@ h4 {
     .title {
         font-size: 3rem;
     }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.col-12 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 </style>
