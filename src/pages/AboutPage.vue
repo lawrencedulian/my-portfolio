@@ -15,9 +15,9 @@ export default {
                 "HTML5",
                 "CSS3/Sass",
                 "Javascript ES6",
-                "Typescript",
+                "Typescript (Learning)",
                 "PHP",
-                "SQL",
+                "SQL"
             ],
 
             // FRAMEWORKS
@@ -26,7 +26,9 @@ export default {
                 "Bootstrap 5",
                 "Laravel 9",
                 "Quasar",
-                "React (Learning)"
+                "RxDB",
+                "React (Learning)",
+                "Tailwind (Learning)"
             ],
 
             // TOOLS
