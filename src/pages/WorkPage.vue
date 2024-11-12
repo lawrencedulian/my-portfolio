@@ -11,16 +11,33 @@ export default {
             works: [
                 {
                     //REACT NASA-API
+                    title: "Swole Fit",
+                    cover: "react-swole-fit.png",
+                    description: "The ultimate gym app built with react and tailwind css",
+                    programmingLanguage: [
+                        "html",
+                        "css",
+                        "javascript",
+                        "tailwind",
+                        "react"
+                    ],
+                    github: "https://github.com/lawrencedulian/react-swoley-fit",
+                    netlify: "https://react-swoley-fit.netlify.app/",
+                },
+                {
+                    //REACT NASA-API
                     title: "NASA API",
-                    cover: ["react-nasa-1.png", "react-nasa-2.png"],
-                    description: "React using NASA API",
+                    // cover: ["react-nasa-1.png", "react-nasa-2.png"],
+                    cover: "react-nasa-1.png",
+                    description: "Build a React.JS App with Nasa API",
                     programmingLanguage: [
                         "html",
                         "css",
                         "javascript",
                         "react"
                     ],
-                    github: "https://github.com/lawrencedulian/react-todolist"
+                    github: "https://github.com/lawrencedulian/nasa-react-app",
+                    netlify: "https://react-apii-nasa.netlify.app/",
                 },
                 {
                     //REACT TODO-LIST
@@ -33,7 +50,8 @@ export default {
                         "javascript",
                         "react"
                     ],
-                    github: "https://github.com/lawrencedulian/react-todolist"
+                    github: "https://github.com/lawrencedulian/react-todolist",
+                    netlify: "https://reactjs-todo-listt.netlify.app/"
                 },
                 {
                     //BOOLBNB
@@ -157,8 +175,23 @@ export default {
         <section class="work-projects row row-cols-md-2 mt-5">
             <div class="col-12" v-for="(work, index) in works" :key="index">
                 <div class="text mb-2">
-                    <h4>{{ work.title }}</h4>
-                    <p class="work-desc">{{ work.description }}</p>
+                    <div class="box d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">{{ work.title }}</h4>
+                        <div class="row justify-content-center">
+                            <div class="col-1">
+                                <a :href="work.github" :class="work.github ? '' : 'd-none'" target="_blank">
+                                    <i class="fa-brands fa-lg fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="col-1" :class="work.netlify ? 'ms-3' : ''">
+                                <a :href="work.netlify" :class="work.netlify ? '' : 'd-none'" target="_blank">
+                                    <i class="fa-solid fa-lg fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="work-desc mt-1 mb-1">{{ work.description }}</p>
                     <ul class="d-flex flex-nowrap align-items-center">
                         <li v-for="pl in work.programmingLanguage" :key="pl" class="pl">{{ pl }}</li>
                     </ul>
@@ -199,7 +232,7 @@ export default {
     font-size: 5rem;
 }
 
-h4 {
+.box {
     border-bottom: 1px solid var(--text-color);
 }
 
