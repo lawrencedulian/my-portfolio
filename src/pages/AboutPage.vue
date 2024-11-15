@@ -1,6 +1,6 @@
 <script>
-import { store } from '../store';
 import scrollToTopButton from '../components/scrollToTopButton.vue';
+import { store } from '../store';
 
 export default {
     name: "AboutPage",
@@ -10,34 +10,39 @@ export default {
     data() {
         return {
             store,
-            // LANGUAGES
-            languages: [
+            // FRONTEND
+            frontend: [
                 "HTML5",
                 "CSS3/Sass",
                 "Javascript ES6",
-                "Typescript (Learning)",
-                "PHP",
-                "SQL"
+                "Bootstrap",
+                "Quasar",
+                "Vue",
             ],
 
-            // FRAMEWORKS
-            frameworks: [
-                "Vue 3",
-                "Bootstrap 5",
+            // BACKEND
+            backend: [
+                "Php",
                 "Laravel 9",
-                "Quasar",
+                "MySQL",
                 "RxDB",
-                "React (Learning)",
-                "Tailwind (Learning)"
+            ],
+
+            learning: [
+                "React.js",
+                "Tailwindcss", 
+                "Typescript",
+                "Gsap",
             ],
 
             // TOOLS
             tools: [
-                "bash",
+                "VS Code",
+                "Bash",
+                "Npm",
                 "Git & Github",
                 "Chrome DevTools",
                 "Postman",
-                "MySQL"
             ]
         }
     },
@@ -62,7 +67,7 @@ export default {
                 <!-- <img class="profile m-0" src="../assets/img/profile.jpeg" alt=""> -->
             </div>
             <div class="text col-lg-6 col-md-12 d-flex flex-column justify-content-end">
-                <p class="description text-justify">
+                <p class="description text-justify font-weight-100">
                     <!-- Hello, I'm Lawrence, a junior full-stack web developer based in sunny Messina, Sicily, where it
                     feels
                     like summer all year round. I'm deeply passionate about technology and have a relentless drive to
@@ -99,21 +104,27 @@ export default {
                 <p>SKILLS</p>
             </div>
             <div class="col">
-                <p>LANGUAGES</p>
+                <p>FRONTEND</p>
                 <ul>
-                    <li class="font-weight-100" v-for="lang in languages" :key="lang"> {{ lang }}</li>
+                    <li class="font-weight-100" v-for="fe in frontend" :key="fe"> {{ fe }}</li>
                 </ul>
             </div>
             <div class="col">
-                <p>FRAMEWORKS</p>
+                <p>BACKEND</p>
                 <ul>
-                    <li class="font-weight-100" v-for="fr in frameworks" :key="fr"> {{ fr }}</li>
+                    <li class="font-weight-100" v-for="be in backend" :key="be"> {{ be }}</li>
                 </ul>
             </div>
             <div class="col">
                 <p>TOOLS</p>
                 <ul>
                     <li class="font-weight-100" v-for="tool in tools" :key="tool"> {{ tool }}</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>LEARNING</p>
+                <ul>
+                    <li class="font-weight-100" v-for="wip in learning" :key="wip"> {{ wip }}</li>
                 </ul>
             </div>
         </section>
@@ -189,6 +200,10 @@ p {
 
 .font-weight-100 {
     font-weight: 100;
+}
+
+li {
+    font-size: 1rem;
 }
 
 .work-experience {
@@ -297,6 +312,10 @@ p {
 
 @media screen and (max-width: 768px) {
     p {
+        font-size: .8rem;
+    }
+
+    li {
         font-size: .8rem;
     }
 
