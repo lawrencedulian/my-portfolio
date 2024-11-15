@@ -10,6 +10,22 @@ export default {
             // WORKS
             works: [
                 {
+                    //REACT APPLE LANDING PAGE
+                    title: "Apple Landing Page",
+                    cover: "apple-landing-page.png",
+                    description: "Apple Landing page built with react, learning gsap animation",
+                    programmingLanguage: [
+                        "html",
+                        "css",
+                        "javascript",
+                        "tailwind",
+                        "react",
+                        "gsap"
+                    ],
+                    github: "https://github.com/lawrencedulian/react-apple-landing-page",
+                    netlify: "https://react-gsap-landing-page.netlify.app/",
+                },
+                {
                     //REACT NASA-API
                     title: "Swole Fit",
                     cover: "react-swole-fit.png",
