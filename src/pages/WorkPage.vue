@@ -13,7 +13,7 @@ export default {
                     //REACT APPLE LANDING PAGE
                     title: "Apple Landing Page",
                     cover: "apple-landing-page.png",
-                    description: "Apple Landing page responsive built with react, learning gsap animation",
+                    description: "Apple landing page responsive built with react, learning gsap animation",
                     programmingLanguage: [
                         "html",
                         "css",
