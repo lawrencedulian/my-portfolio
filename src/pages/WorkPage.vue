@@ -13,7 +13,7 @@ export default {
                     //REACT APPLE LANDING PAGE
                     title: "Apple Landing Page",
                     cover: "apple-landing-page.png",
-                    description: "Apple landing page responsive built with react, learning gsap animation",
+                    description: "Apple landing page responsive built with react, learning gsap animation.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -29,7 +29,7 @@ export default {
                     //REACT NASA-API
                     title: "Swole Fit",
                     cover: "react-swole-fit.png",
-                    description: "The ultimate gym app built with react and tailwind css",
+                    description: "The ultimate gym app built with react and tailwind css.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -45,7 +45,7 @@ export default {
                     title: "NASA API",
                     // cover: ["react-nasa-1.png", "react-nasa-2.png"],
                     cover: "react-nasa-1.png",
-                    description: "Build a React.JS App with Nasa API",
+                    description: "Build a React.JS App with Nasa API.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -89,7 +89,7 @@ export default {
                     //BOOLFLIX
                     title: "Boolflix",
                     cover: "boolflix.png",
-                    description: "Replica ui of Netflix, using the movie databse (TMDB) to search film and series",
+                    description: "Replica ui of Netflix, using the movie databse (TMDB) to search film and series.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -102,7 +102,7 @@ export default {
                     //BOOLZAPP
                     title: "Boolzapp",
                     cover: "boolzapp.png",
-                    description: "Replica old ui of Whatsapp, added send message function",
+                    description: "Replica old ui of Whatsapp, added send message function.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -114,7 +114,7 @@ export default {
                     //DROPBOX
                     title: "Dropbox",
                     cover: "dropbox.png",
-                    description: "Landing page",
+                    description: "Landing page.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -124,7 +124,7 @@ export default {
                     //SPOTIFY
                     title: "Spotify",
                     cover: "spotify.png",
-                    description: "Landing page",
+                    description: "Landing page.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -134,7 +134,7 @@ export default {
                     //DISCORD
                     title: "Discord",
                     cover: "discord.png",
-                    description: "Landing page",
+                    description: "Landing page.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -144,7 +144,7 @@ export default {
                     //PLAYSTATION
                     title: "Playstation",
                     cover: "playstation.png",
-                    description: "Landing page",
+                    description: "Landing page.",
                     programmingLanguage: [
                         "html",
                         "css",
@@ -154,7 +154,7 @@ export default {
                     //PORTFOLIO
                     title: "Portfolio",
                     cover: "portfolio.png",
-                    description: "Landing page",
+                    description: "Landing page.",
                     programmingLanguage: [
                         "html",
                         "css",
