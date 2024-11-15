@@ -261,6 +261,7 @@ export default {
 }
 
 .text {
+    font-size: 1rem;
     .pl:first-child {
         margin-left: 0;
     }
@@ -287,6 +288,15 @@ export default {
 @media screen and (max-width: 991px) {
     .title {
         font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: .8rem;
+        h4 {
+            font-size: 1.2rem;
+        }
     }
 }
 
