@@ -5,6 +5,18 @@ export const store = reactive({
     // EDUCATION
     education: [
         {
+            school: 'Three School - Opinno',
+            qualification: 'AWS Solution Architect',
+            period: 'JANUARY 2025',
+            description: 'In-depth training on designing and deploying scalable, secure, and efficient cloud solutions on Amazon Web Services (AWS). Through a combination of lectures and hands-on labs, I gained expertise in architecting advanced AWS infrastructures, with a focus on resilience, performance, and cost optimization. I developed skills in designing and implementing cloud solutions that meet business requirements, and learned best practices for optimizing resources and minimizing costs.'
+        },
+        {
+            school: 'Three School - Opinno',
+            qualification: 'AWS Cloud Practitioner',
+            period: 'NOVEMBER 2024',
+            description: 'Introduction to the fundamental concepts of cloud computing and AWS services, with a focus on scalable architectures and best practices for optimizing resources. I have acquired the necessary skills to understand the basic principles of the cloud and support business decisions based on cloud solutions.'
+        },
+        {
             school: 'Nextar',
             qualification: 'Microsoft Sharepoint',
             period: 'SEPTEMBER 2023 - NOVEMBER 2023',
@@ -29,7 +41,7 @@ export const store = reactive({
         {
             title: 'Frontend Developer',
             company: 'Cleverativity',
-            period: 'JANUARY 2024 - PRESENT',
+            period: 'JANUARY 2024 - DECEMBER 2024',
             description: 'Frontend developer in a company working on industrial/mechanical projects. My responsibilities include:',
             work: [
                "Developing responsive and intuitive user interfaces to enhance overall user experience.",
