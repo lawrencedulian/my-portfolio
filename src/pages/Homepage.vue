@@ -13,6 +13,18 @@ export default {
   mounted() {
     this.preloadImages();
   },
+  beforeUnmount() {
+    // Cleanup quando il componente viene distrutto
+    this.isLoading = false;
+  },
+  watch: {
+    $route(to, from) {
+      // Se si naviga via dalla homepage, resetta il loading
+      if (from.name === "home" && to.name !== "home") {
+        this.isLoading = false;
+      }
+    },
+  },
   methods: {
     preloadImages() {
       // Crea array di promesse per il precaricamento di tutte le immagini
