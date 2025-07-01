@@ -20,7 +20,7 @@ export default {
     <section class="contact-form mt-3 mb-5">
       <div class="row">
         <div class="col-12 col-lg-8 col-md-12">
-          <form name="contact" method="POST" netlify onsubmit="submit">
+          <form name="contact" method="POST" netlify>
             <!-- NAME AND EMAIL-->
             <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
               <div class="col">
@@ -45,7 +45,6 @@ export default {
                   placeholder="Email"
                   required
                   aria-label="Email"
-                  value
                 />
               </div>
             </div>
