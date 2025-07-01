@@ -19,7 +19,7 @@ export default {
     },
     startImageChangeInterval() {
       this.currentIndex = 1;
-      setInterval(this.changeImage, 250);
+      setInterval(this.changeImage, 150);
     },
   },
 };

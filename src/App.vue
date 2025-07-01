@@ -53,13 +53,13 @@ export default {
     >
       <ul class="d-flex flex-column align-items-start">
         <li>
-          <router-link :to="'/'" class="nav-link">HOME</router-link>
+          <router-link :to="'/'" class="nav-link">Home</router-link>
         </li>
         <li>
-          <router-link :to="'/work'" class="nav-link">WORK</router-link>
+          <router-link :to="'/work'" class="nav-link">Work</router-link>
         </li>
         <li>
-          <router-link :to="'/about'" class="nav-link">ABOUT</router-link>
+          <router-link :to="'/about'" class="nav-link">About</router-link>
         </li>
         <!-- <li>
                     <router-link :to="'/contact'" class="nav-link">CONTACT</router-link>
