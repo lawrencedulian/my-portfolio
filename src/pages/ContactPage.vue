@@ -1,118 +1,130 @@
 <script>
 export default {
-    name: "ContactPage",
-    methods: {
-        encode(data) {
-            return Object.keys(data)
-            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}` ).join('&')
-        },
-        handleSubmit() {
-            fetch('/', {
-                method: 'post',
-                headers: {
-                    'Content-Type' : 'application/x-www-form-urlencoded'
-                },
-                body: this.encode({
-                    'form-name' : 'contact',
-                    ...this.form
-                })
-            })
-            .then(() => console.log("successfully sent"))
-            .catch(e => console.error(e))
-        }
-    }
+  name: "ContactPage",
 };
 </script>
 
-
 <template>
-    <div class="container">
-        <section class="contact row">
-            <div class="col-6 d-flex align-items-center justify-content-end">
-                <div class="bar">
-                    <div class="progress"></div>
-                </div>
-            </div>
-            <div class="col-6">
-                <h2 class="title">contact</h2>
-            </div>
-        </section>
+  <div class="container">
+    <section class="contact row">
+      <div class="col-6 d-flex align-items-center justify-content-end">
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <div class="col-6">
+        <h2 class="title">contact</h2>
+      </div>
+    </section>
 
-        <section class="contact-form mt-3">
-            <div class="row">
-                <div class="col-12 col-lg-8 col-md-12">
-                  <form @submit.prevent="handleSubmit" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
-                    <input name="bot-field" class="d-none">
-                    <div class="form-row">
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="name">Your Name</label>
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="inputEmail">Your Email</label>
-                            <input type="email" class="form-control" id="inputEmail" name="email">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-3">Send</button>
-                  </form>
-                </div>
+    <section class="contact-form mt-3 mb-5">
+      <div class="row">
+        <div class="col-12 col-lg-8 col-md-12">
+          <form name="contact" method="POST" netlify onsubmit="submit">
+            <!-- NAME AND EMAIL-->
+            <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
+              <div class="col">
+                <label for="name"></label>
+                <input
+                  type="text"
+                  class="my-form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                  aria-label="Name"
+                />
+              </div>
+              <div class="col">
+                <label for="email"></label>
+                <input
+                  type="email"
+                  class="my-form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  aria-label="Email"
+                  value
+                />
+              </div>
             </div>
 
-        </section>
-    </div>
+            <!-- TEXTAREA -->
+            <div class="mb-3 row">
+              <div class="col">
+                <label for="message"></label>
+                <textarea
+                  class="message p-3"
+                  id="message"
+                  name="message"
+                  rows="15"
+                  placeholder="Your message goes over here."
+                ></textarea>
+
+                <div class="d-flex justify-content-start mt-3">
+                  <button type="submit" class="my-btn p-0">SEND MESSAGE</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .title {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 .my-form-control {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background-color: transparent;
-    color: var(--text-color);
-    border-bottom: 2px solid var(--text-color);
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
 }
 
 ::placeholder {
-    color: var(--text-color);
-    font-weight: 400;
+  color: var(--text-color);
+  font-weight: 400;
 }
 
 textarea {
-    width: 100%;
-    background: none;
-    color: var(--text-color);
-    border-radius: 10px;
+  width: 100%;
+  background: none;
+  color: var(--text-color);
+  border-radius: 10px;
 }
 
 :focus {
-    outline: 0;
-    outline-color: transparent;
-    outline-style: none;
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
 }
 
 .message {
-    border: 2px solid var(--text-color);
+  border: 2px solid var(--text-color);
 }
 
 .my-btn {
-    background: none;
-    border: none;
-    text-decoration: none !important;
-    color: var(--text-color);
-    border-bottom: 2px solid var(--text-color);
+  background: none;
+  border: none;
+  text-decoration: none !important;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
 }
 
 @media screen and (max-width: 991px) {
-    .title {
-        font-size: 3rem;
-    }
+  .title {
+    font-size: 3rem;
+  }
 
-    #email {
-        margin-top: 1rem;
-    }
+  #email {
+    margin-top: 1rem;
+  }
 }
 </style>
