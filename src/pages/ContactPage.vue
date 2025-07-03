@@ -37,6 +37,7 @@ export default {
       <div class="row">
         <div class="col-12 col-lg-8 col-md-12">
           <form name="contact" @submit.prevent="handleSubmit" netlify>
+            <input type="hidden" name="form-name" value="contact" />
             <!-- NAME AND EMAIL-->
             <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
               <div class="col">
