@@ -9,6 +9,7 @@ export default {
         message: "",
       },
       isSubmitting: false,
+      isSubmitted: false,
     };
   },
   methods: {
@@ -36,15 +37,13 @@ export default {
         if (response.ok) {
           // Reset form
           this.form = { name: "", email: "", message: "" };
-          alert("Thank you for your message! I'll get back to you soon.");
+          this.isSubmitted = true;
         } else {
           throw new Error("Form submission failed");
         }
       } catch (error) {
         console.error("Error:", error);
-        alert(
-          "Sorry, there was an error sending your message. Please try again."
-        );
+        this.isSubmitted = false;
       } finally {
         this.isSubmitting = false;
       }
@@ -134,9 +133,15 @@ export default {
                   <button
                     type="submit"
                     class="my-btn p-0"
-                    :disabled="isSubmitting"
+                    :disabled="isSubmitting || isSubmitted"
                   >
-                    {{ isSubmitting ? "SENDING..." : "SEND MESSAGE" }}
+                    {{
+                      isSubmitting
+                        ? "SENDING..."
+                        : isSubmitted
+                        ? "MESSAGE SENT!"
+                        : "SEND MESSAGE"
+                    }}
                   </button>
                 </div>
               </div>

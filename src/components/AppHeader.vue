@@ -45,7 +45,7 @@ export default {
       <div class="row">
         <div class="col col-md-6 col-lg-4 col-xl-3">
           <ul class="d-flex align-items-center">
-            <li>
+            <li class="me-5">
               <router-link
                 :to="'/'"
                 class="nav-link d-flex align-items-center"
@@ -59,19 +59,17 @@ export default {
                 <span class="logo-text">Edulian</span>
               </router-link>
             </li>
-            <li>
-              <router-link :to="'/work'" class="nav-link ms-5"
-                >Work</router-link
-              >
+            <li class="me-4">
+              <router-link :to="'/work'" class="nav-link">Work</router-link>
+            </li>
+            <li class="me-4">
+              <router-link :to="'/about'" class="nav-link">About</router-link>
             </li>
             <li>
-              <router-link :to="'/about'" class="nav-link ms-4"
-                >About</router-link
+              <router-link :to="'/contact'" class="nav-link"
+                >Contact</router-link
               >
             </li>
-            <!-- <li>
-                            <router-link :to="'/contact'" class="nav-link">CONTACT</router-link>
-                        </li> -->
           </ul>
         </div>
       </div>
