@@ -1,10 +1,4 @@
 [[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-  conditions = {RequestMethod = ["GET", "HEAD"]}
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

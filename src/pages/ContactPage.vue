@@ -1,19 +1,52 @@
 <script>
 export default {
   name: "ContactPage",
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
+      isSubmitting: false,
+    };
+  },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
     async handleSubmit(e) {
-      const form = e.target;
-      const data = new FormData(form);
+      e.preventDefault();
+      this.isSubmitting = true;
+
       try {
-        await fetch("/", {
+        const response = await fetch("/", {
           method: "POST",
-          body: new URLSearchParams([...data]),
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: this.encode({
+            "form-name": "contact",
+            ...this.form,
+          }),
         });
-        // Optionally redirect to a thank you page or show a message
+
+        if (response.ok) {
+          // Reset form
+          this.form = { name: "", email: "", message: "" };
+          alert("Thank you for your message! I'll get back to you soon.");
+        } else {
+          throw new Error("Form submission failed");
+        }
       } catch (error) {
-        this.$router.push("/notFound");
+        console.error("Error:", error);
+        alert(
+          "Sorry, there was an error sending your message. Please try again."
+        );
+      } finally {
+        this.isSubmitting = false;
       }
     },
   },
@@ -36,8 +69,23 @@ export default {
     <section class="contact-form mt-3 mb-5">
       <div class="row">
         <div class="col-12 col-lg-8 col-md-12">
-          <form name="contact" @submit.prevent="handleSubmit" netlify>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            @submit="handleSubmit"
+          >
+            <!-- Hidden input for form name -->
             <input type="hidden" name="form-name" value="contact" />
+
+            <!-- Honeypot field for spam protection -->
+            <p class="d-none">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
+
             <!-- NAME AND EMAIL-->
             <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
               <div class="col">
@@ -47,6 +95,7 @@ export default {
                   class="my-form-control"
                   id="name"
                   name="name"
+                  v-model="form.name"
                   placeholder="Name"
                   required
                   aria-label="Name"
@@ -59,6 +108,7 @@ export default {
                   class="my-form-control"
                   id="email"
                   name="email"
+                  v-model="form.email"
                   placeholder="Email"
                   required
                   aria-label="Email"
@@ -74,12 +124,20 @@ export default {
                   class="message p-3"
                   id="message"
                   name="message"
+                  v-model="form.message"
                   rows="15"
                   placeholder="Your message goes over here."
+                  required
                 ></textarea>
 
                 <div class="d-flex justify-content-start mt-3">
-                  <button type="submit" class="my-btn p-0">SEND MESSAGE</button>
+                  <button
+                    type="submit"
+                    class="my-btn p-0"
+                    :disabled="isSubmitting"
+                  >
+                    {{ isSubmitting ? "SENDING..." : "SEND MESSAGE" }}
+                  </button>
                 </div>
               </div>
             </div>
@@ -132,6 +190,12 @@ textarea {
   text-decoration: none !important;
   color: var(--text-color);
   border-bottom: 2px solid var(--text-color);
+  transition: opacity 0.3s ease;
+}
+
+.my-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 991px) {
