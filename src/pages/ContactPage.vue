@@ -1,6 +1,22 @@
 <script>
 export default {
   name: "ContactPage",
+  methods: {
+    async handleSubmit(e) {
+      const form = e.target;
+      const data = new FormData(form);
+      try {
+        await fetch("/", {
+          method: "POST",
+          body: new URLSearchParams([...data]),
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        });
+        // Optionally redirect to a thank you page or show a message
+      } catch (error) {
+        this.$router.push("/notFound");
+      }
+    },
+  },
 };
 </script>
 
@@ -20,7 +36,7 @@ export default {
     <section class="contact-form mt-3 mb-5">
       <div class="row">
         <div class="col-12 col-lg-8 col-md-12">
-          <form name="contact" method="POST" netlify>
+          <form name="contact" @submit.prevent="handleSubmit" netlify>
             <!-- NAME AND EMAIL-->
             <div class="mb-3 row row-cols-1 row-cols-lg-2 row-cols-md-1">
               <div class="col">
